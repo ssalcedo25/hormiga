@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/js3.js"></script>
+    <title>Birthday Scape Box</title>
+</head>
+
+<body>
+    <div id="portada">
+        <img id="portada-img" src="estilos/portada.gif" alt="portada">
+    </div>
+    <h1>Bienvenida a <span style="color: blueviolet;">Scape Box</span></h1>
+    <div>
+        <p>Para empezar el juego deber hacer click en el boton "Iniciar"</p>
+    </div>
+    <div>
+        <div id="info">
+            <div id="retos">
+                <div class="infoo">
+                    <div class="contenedorSup" id="reto">
+                        <p>3</p>
+                    </div>
+                    <p>Retos</p>
+                </div>
+                <div class="infoo">
+                    <div class="contenedorSup" id="completados">
+                        <p>0</p>
+                    </div>
+                    <p>Completados</p>
+                </div>
+            </div>
+            <div id="contenedorTemporizador">
+                <div class="contenedorSup" id="boton" onclick="tempo()" style="display: block;">
+                    <button id="iniciar">Iniciar</button>
+                </div>
+                <div class="contenedor" id="temporizador" style="display: none;">
+                    <div class="infoo" id="display">
+                        <div class="contenedorSup" id="min">
+                            <p>45</p>
+                        </div>
+                        <p>Minutos</p>
+                    </div>
+                    <div class="infoo">
+                        <div class="contenedorSup" id="segundos">
+                            <p>00</p>
+                        </div>
+                        <p>Segundos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="ContenedorReto" id="uno">
+            <div class="h2" style="border-radius: 20px;" onclick="desplegar('pUno')">
+                <h2>Reto 1</h2>
+            </div>
+            <div class="parrafo" id="pUno" style="display: none">
+                <div>
+                    <p><span style="color: blueviolet; font-size: 22px; font-weight: bold;">Tu primera misión es
+                            descifrar un mensaje oculto.</span></p>
+                    <p>Para eso, vamos a jugar al ahorcado. Te daré una palabra secreta, y tú tendrás que adivinarla
+                        <span class="negritas">letra por letra.</span>
+                    </p>
+                    <p>¿Cómo funciona? Cada vez que intentes una letra, tendrás que escribirla en el recuadro.</p>
+
+
+                    <p><span class="negritas">Si aciertas la letra, aparecerá en verde</span> y se colocará en
+                        el lugar correcto de la palabra.</p>
+                    <p>
+
+                        <span class="negritas">Si fallas, perderás un intento.</span>
+                        ¡Pero no te preocupes! Tienes 6 intentos en total para cada
+                        palabra.
+                    </p>
+                    <p>
+                        Una vez que hayas adivinado todas las letras de la palabra secreta, habrás encontrado la primera
+                        pista para abrir la caja. </p>
+                    <p><span class="negritas">¡Esa palabra te llevará al siguiente paso de tu aventura!</span>
+                    </p>
+                </div>
+                <button onclick="iniciarJuego()">Iniciar Juego</button>
+                <div id="juego"></div>
+            </div>
+        </div>
+        <button id="completado1" onclick="completarReto(this)">Completado</button>
+        <div class="ContenedorReto" id="dos" style="display: none">
+            <div class="h2" style="border-radius: 20px;">
+                <h2 onclick="desplegar('pDos')">Reto 2</h2>
+            </div>
+            <div class="parrafo" id="pDos">
+                <div>
+                    <p class="negritas">Segunda misión.</p>
+                    <p> Hay dos cajas iguales, pero solo una te llevará al tesoro. Busca la que tiene un número 1. Para
+                        abrirla, tendrás que girar una rueda.</p>
+
+
+                    <p class="negritas">Para abrir la caja, primero necesitas descubrir dos números secretos para cada
+                        caja.</p>
+                    <p>Cuando encuentres el primero numero debes girar la rueda
+                        (en el sentido de las manecillas del reloj).</p>
+                    <p> Una vez que encuentres ese número, tendrás
+                        que girar en sentido contrario hasta el segundo numero. ¡Si te equivocas, tendrás que empezar
+                        de nuevo!</p>
+
+                    <p>Para poder decifrar los numero que abren las cajas encontrarás un cuento fascinante que debes
+                        leer.</p>
+                    <p>Mientras lees, presta mucha atención a las palabras que <span class="negritas">destacan</span>.
+                        Cada una de ellas esconde una
+                        pista que te llevará a descubrir un tesoro oculto.</p>
+
+                </div>
+                <div>
+                    <p> <span style="color: blueviolet; font-size: 22px; font-weight: bold;">La Pequeña Gigante</span>
+                    </p>
+
+                    <p style="font-style: italic;">Había una vez, en un hormiguero muy especial, una <span
+                            style="font-weight: bold;">hormiga</span>
+                        reina muy pequeña pero muy valiente. </p>
+
+                    <p style="font-style: italic;">A pesar de su tamaño, era la más <span
+                            style="font-weight: bold;">fuerte</span> y trabajadora de
+                        todas. Día tras día, guiaba a su colonia hacia el <span class="negritas">éxito</span>,
+                        buscando el mejor alimento y construyendo un hogar seguro.</p>
+
+                    <p style="font-style: italic;">Todos la admiraban por su coraje. Cuando el río se desbordaba, era
+                        ella quien encontraba el <span class="negritas">camino</span> más seguro. </p>
+
+                    <p style="font-style: italic;">Cuando el <span class="negritas">viento</span> soplaba
+                        fuerte, era ella quien reforzaba el
+                        hormiguero. Y cuando el sol brillaba, era ella quien guiaba a sus súbditos hacia los campos más
+                        fértiles.
+                    </p>
+                    <p style="font-style: italic;">Era <span class="negritas">amada</span> por todos,
+                        especialmente por su familia. Su madre,
+                        la <span class="negritas">reina</span> anterior, estaba muy orgullosa de ella. Su
+                        padre,
+                        un viejo explorador, le había enseñado todo lo que sabía sobre la naturaleza. Y sus hermanos,
+                        los
+                        príncipes y princesas del hormiguero, la admiraban y la respetaban.
+                    </p>
+                    <p style="font-style: italic;">La pequeña gigante <span class="negritas">hormiga</span>
+                        era un ejemplo para todos. Nos
+                        enseñaba que, sin importar el tamaño, podemos lograr grandes cosas si trabajamos duro y somos
+                        valientes.
+                    </p><br><br>
+                    <p>Con las cartas que has creado la historia vas a generar una operacion matemáticas, que te va a
+                        dar un numero, ese numero es el primer digito de la caja y luego ese numero debes multiplicarlo
+                        por la cantidad de cartas repetidas</p>
+                </div>
+                <div>
+
+                    <form id="operacionesForm1" action=""> <input class="suma" type="number" min="0" max="100"> + <input
+                            class="suma" type="number" min="0" max="100"> + <input class="suma" type="number" min="0"
+                            max="100"> - <input class="resta" type="number" min="0" max="100"> - <input class="resta"
+                            type="number" min="0" max="100"> - <input class="resta" type="number" min="0" max="100"> =
+                        <input class="resultado" type="number" readonly> <input type="submit" value="Calcular">
+                    </form>
+
+
+                    <script src="js/operaciones.js"></script>
+                </div>
+            </div>
+        </div>
+        <button id="completado2" onclick="completarReto(this)" style="display: none;">Completado</button>
+        <div class="ContenedorReto" id="tres" style="display: none" ">
+            <div class=" h2" style="border-radius: 20px;" onclick="desplegar('pTres')">
+            <h2>Reto 3</h2>
+        </div>
+        <div class="parrafo" id="pTres">
+            <p>En tus manos deberias tener 10 cartas. Que no han sido utilizadas para crear la historia. </p>
+            <p>
+                ¡Tu misión es encontrar los números que, al combinarlos de una maneras especial, te revelarán un
+                número secreto! </p>
+            <p>
+                Introducé los números hasta que obtengas el digito secreto</p>
+
+            <form id="operacionesForm2" action=""> <input class="suma" type="number" min="0" max="100"> + <input
+                    class="suma" type="number" min="0" max="100"> + <input class="suma" type="number" min="0" max="100">
+                - <input class="resta" type="number" min="0" max="100"> - <input class="resta" type="number" min="0"
+                    max="100"> - <input class="resta" type="number" min="0" max="100"> =
+                <input class="resultado" type="number" readonly> <input type="submit" value="Calcular">
+            </form>
+
+            <form id="operacionesForm3" action=""> <input id="resultadoForm1" type="number" readonly> + <input
+                    class="suma" type="number" min="0" max="100"> <input class="resultado2" type="number" readonly>
+                <input type="submit" value="Calcular">
+            </form>
+        </div>
+    </div>
+    <script src="js/operaciones.js"></script>
+    </div>
+    <button id="completado3" onclick="completarUltimoReto()" style="display: none;">Completado</button>
+
+
+</body>
+
+</html>

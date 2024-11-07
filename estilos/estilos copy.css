@@ -1,0 +1,86 @@
+#portada {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+div {
+    text-align: center;
+}
+
+.contenedorSup {
+    background-color: blueviolet;
+    height: 100px;
+    width: 200px;
+    border-radius: 20px;
+    align-items: center;
+
+}
+
+#info {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+
+}
+
+#reto,
+#completados,
+#min,
+#segundos {
+    display: flex;
+    justify-content: center;
+    font-size: 31px;
+    color: white;
+
+}
+
+#min,
+#segundos,
+#iniciar {
+    background-color: #E6BA4F;
+}
+
+#retos,
+#contenedorTemporizador {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#completados {
+    background-color: #C7E64F;
+}
+
+.ContenedorReto {
+    margin-left: 25%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    border: 1px solid blueviolet;
+    margin-bottom: 1%;
+    
+}
+
+.h2 {
+    background-color: blueviolet;
+    color: white;
+}
+
+h2 {
+    padding: 1%;
+    margin: 0px;
+    border-radius: 20px;
+}
+
+#iniciar {
+    width: 100%;
+    height: inherit;
+    font-size: 31px;
+    color: white;
+    border-radius: 20px;
+    border: 1px;
+}
